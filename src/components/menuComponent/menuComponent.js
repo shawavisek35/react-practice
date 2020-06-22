@@ -1,7 +1,7 @@
 import React , {Component} from "react";
 import DishDetail from "../dishDetailComponent/dishDetailComponent";
 
-class Menu extends Component {
+ class Menu extends Component {
 
     constructor(props) {
         super(props);
