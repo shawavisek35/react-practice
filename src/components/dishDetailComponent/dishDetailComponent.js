@@ -13,7 +13,7 @@ function RenderComments(comments){
 
 function RenderDish(dish){
     return (
-        <div className="col-md-6 col-sm-12">
+        
             <div class="card mb-5" style={{width: "25rem"}}>
                 <img src={dish.image} class="card-img-top" alt="..." />
                 <div class="card-body">
@@ -23,7 +23,7 @@ function RenderDish(dish){
                             
                 </div>
             </div>
-        </div>        
+              
     );
 }
 
@@ -39,13 +39,18 @@ const  DishDetail = (props) => {
                 );
         });
         return (
-            <div className="row">
-                {RenderDish(props.selectedDish)}
-                <div className="col-md-6 col-sm-12">
-                    <h4 className="mb-4 text-center">Comments</h4>
-                    <ul>
-                        {comments}
-                    </ul>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 col-sm-12">
+                        {RenderDish(props.selectedDish)}
+                    </div>
+                    <div className="col-md-6 col-sm-12">
+                        <h4 className="mb-4 text-center">Comments</h4>
+                        <ul>
+                            {comments}
+                        </ul>
+                    </div>
+                
                 </div>
             </div>
         )
